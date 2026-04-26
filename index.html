@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CeraV Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #fffaf6;
+      color: #2c2c2c;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      color: #f18f01;
+    }
+
+    /* Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #f18f01;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #f18f01;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #ffe9e3 0%, #fff1f0 100%);
+      color: #2c2c2c;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      padding: 15px 35px;
+      background: #f18f01;
+      color: #ffffff;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background: #e07a00;
+      transform: scale(1.05);
+    }
+
+    /* Features Section */
+    .features {
+      padding: 80px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .features h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #f18f01;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .feature-card img {
+      width: 60px;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #f18f01;
+    }
+
+    .feature-card p {
+      font-size: 1rem;
+      color: #555555;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c2c2c;
+      color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ffffff;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #f18f01;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">CeraV</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Glow Naturally with CeraV</h1>
+    <p>Discover the skincare solution that nourishes, hydrates, and revitalizes your skin with gentle, dermatologist-tested ingredients.</p>
+    <button class="cta-button">Shop Now</button>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <h2>Why Choose CeraV?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <img src="https://img.icons8.com/ios-filled/100/ffb347/water.png" alt="Deep Hydration">
+        <h3>Deep Hydration</h3>
+        <p>Keep your skin soft and supple with long-lasting moisture and hydration.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://img.icons8.com/ios-filled/100/ffb347/natural-food.png" alt="Natural Ingredients">
+        <h3>Natural Ingredients</h3>
+        <p>Gentle, plant-based formulations that are safe for all skin types.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://img.icons8.com/ios-filled/100/ffb347/shield.png" alt="Protective Barrier">
+        <h3>Protective Barrier</h3>
+        <p>Strengthen your skin’s natural barrier to defend against dryness and environmental stress.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://img.icons8.com/ios-filled/100/ffb347/star.png" alt="Dermatologist Approved">
+        <h3>Dermatologist Approved</h3>
+        <p>Trusted by experts to provide safe and effective skincare for daily use.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="features" id="about">
+    <h2>About CeraV</h2>
+    <p style="max-width:800px;margin: 0 auto;">CeraV is dedicated to creating gentle, effective, and nourishing skincare products. We focus on hydration, protection, and overall skin wellness, delivering formulations backed by science and trusted by dermatologists.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="features" id="contact">
+    <h2>Contact Us</h2>
+    <p style="max-width:800px;margin: 0 auto;">Reach out via email at <a href="mailto:info@cerav.com">info@cerav.com</a> or follow us on social media for the latest products and skincare tips.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Follow us:</p>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="Facebook"></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram"></a>
+    <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/pinterest.png" alt="Pinterest"></a>
+    <p style="margin-top:20px;">&copy; 2026 CeraV. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
